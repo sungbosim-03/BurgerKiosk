@@ -85,6 +85,13 @@ namespace BurgerKiosk
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
+            if (!rdoHamBurger.Checked && !rdoBulgogiBurger.Checked && !rdoChickenBurger.Checked)
+            {
+                lblMessage.Text = "메뉴를 선택해주세요";
+                lblMessage.Visible = true;
+                return; 
+            }
+            lblMessage.Visible = false;
             TotalCost = 0;
             lstOrder.Items.Clear();
 
@@ -117,23 +124,23 @@ namespace BurgerKiosk
             if (chkCheese.Checked)
             {
                 TotalCost += 1500;
-                lstOrder.Items.Add("치즈추가1,500원");
+                lstOrder.Items.Add("치즈추가: 1,500원");
             }
             if (chkSauce.Checked)
             {
                 TotalCost += 500;
-                lstOrder.Items.Add("소스추가500원");
+                lstOrder.Items.Add("소스추가: 500원");
             }
 
-
-            lblTotal.Text = "총 금액: " + TotalCost.ToString() + "원";
+            lblTotal.Text = "총 금액: " + TotalCost.ToString("N0") + "원";
         }
 
         private void rstbtn_Click(object sender, EventArgs e)
         {
             TotalCost = 0;
             lstOrder.Items.Clear();
-            lblTotal.Text = "총 금액: " + TotalCost.ToString() + "원";
+            lblTotal.Text = "총 금액: " + TotalCost.ToString("N0") + "원";
         }
+
     }
 }

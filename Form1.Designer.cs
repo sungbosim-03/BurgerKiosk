@@ -38,20 +38,21 @@
             chkSauce = new CheckBox();
             subbox = new GroupBox();
             mainbox = new GroupBox();
+            pictureBox3 = new PictureBox();
+            pictureBox2 = new PictureBox();
+            pictureBox1 = new PictureBox();
             lstOrder = new ListBox();
             lblTotal = new Label();
             endbox = new GroupBox();
             btnOrder = new Button();
             rstbtn = new Button();
-            pictureBox1 = new PictureBox();
-            pictureBox2 = new PictureBox();
-            pictureBox3 = new PictureBox();
+            lblMessage = new Label();
             subbox.SuspendLayout();
             mainbox.SuspendLayout();
-            endbox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            endbox.SuspendLayout();
             SuspendLayout();
             // 
             // name
@@ -178,6 +179,36 @@
             mainbox.Text = "메뉴 선택";
             mainbox.Enter += mainbox_Enter;
             // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = Properties.Resources.hambuger;
+            pictureBox3.Location = new Point(200, 55);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(125, 66);
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox3.TabIndex = 6;
+            pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = Properties.Resources.bulbuger;
+            pictureBox2.Location = new Point(200, 146);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(125, 62);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 5;
+            pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.chickenbuger;
+            pictureBox1.Location = new Point(200, 240);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(125, 62);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 4;
+            pictureBox1.TabStop = false;
+            // 
             // lstOrder
             // 
             lstOrder.FormattingEnabled = true;
@@ -212,7 +243,7 @@
             // btnOrder
             // 
             btnOrder.Font = new Font("맑은 고딕", 15F);
-            btnOrder.Location = new Point(554, 369);
+            btnOrder.Location = new Point(545, 391);
             btnOrder.Name = "btnOrder";
             btnOrder.Size = new Size(123, 47);
             btnOrder.TabIndex = 13;
@@ -223,7 +254,7 @@
             // rstbtn
             // 
             rstbtn.Font = new Font("맑은 고딕", 15F);
-            rstbtn.Location = new Point(683, 369);
+            rstbtn.Location = new Point(683, 391);
             rstbtn.Name = "rstbtn";
             rstbtn.Size = new Size(105, 47);
             rstbtn.TabIndex = 14;
@@ -231,41 +262,23 @@
             rstbtn.UseVisualStyleBackColor = true;
             rstbtn.Click += rstbtn_Click;
             // 
-            // pictureBox1
+            // lblMessage
             // 
-            pictureBox1.Image = Properties.Resources.chickenbuger;
-            pictureBox1.Location = new Point(200, 240);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(125, 62);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 4;
-            pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.Image = Properties.Resources.bulbuger;
-            pictureBox2.Location = new Point(200, 146);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(125, 62);
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 5;
-            pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            pictureBox3.Image = Properties.Resources.hambuger;
-            pictureBox3.Location = new Point(200, 55);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(125, 66);
-            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox3.TabIndex = 6;
-            pictureBox3.TabStop = false;
+            lblMessage.AutoSize = true;
+            lblMessage.ForeColor = Color.Red;
+            lblMessage.Location = new Point(610, 361);
+            lblMessage.Name = "lblMessage";
+            lblMessage.Size = new Size(149, 20);
+            lblMessage.TabIndex = 15;
+            lblMessage.Text = "메뉴를 선택해주세요";
+            lblMessage.Visible = false;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(lblMessage);
             Controls.Add(rstbtn);
             Controls.Add(btnOrder);
             Controls.Add(endbox);
@@ -278,11 +291,11 @@
             subbox.PerformLayout();
             mainbox.ResumeLayout(false);
             mainbox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             endbox.ResumeLayout(false);
             endbox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -307,5 +320,6 @@
         private PictureBox pictureBox3;
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
+        private Label lblMessage;
     }
 }
