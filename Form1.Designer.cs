@@ -249,24 +249,26 @@
             // 
             // btnOrder
             // 
+            btnOrder.BackColor = SystemColors.ActiveCaption;
             btnOrder.Font = new Font("맑은 고딕", 15F);
             btnOrder.Location = new Point(545, 391);
             btnOrder.Name = "btnOrder";
             btnOrder.Size = new Size(123, 47);
             btnOrder.TabIndex = 13;
             btnOrder.Text = "주문하기";
-            btnOrder.UseVisualStyleBackColor = true;
+            btnOrder.UseVisualStyleBackColor = false;
             btnOrder.Click += btnOrder_Click;
             // 
             // rstbtn
             // 
+            rstbtn.BackColor = SystemColors.Info;
             rstbtn.Font = new Font("맑은 고딕", 15F);
             rstbtn.Location = new Point(683, 391);
             rstbtn.Name = "rstbtn";
             rstbtn.Size = new Size(105, 47);
             rstbtn.TabIndex = 14;
             rstbtn.Text = "초기화";
-            rstbtn.UseVisualStyleBackColor = true;
+            rstbtn.UseVisualStyleBackColor = false;
             rstbtn.Click += rstbtn_Click;
             // 
             // lblMessage
